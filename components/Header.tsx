@@ -24,7 +24,7 @@ export default function Header() {
     }, [translateEngineStore]);
     
     const changeLang = () => {
-        const newLang = i18n.language === "en" ? "zh-CN" : "en";
+        const newLang = i18n.language === "en" ? "zh-CN" : i18n.language === "zh-CN" ? "zh-TW" : "en";
 
         router.push({
             pathname: router.pathname,
